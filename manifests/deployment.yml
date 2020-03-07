@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gordybergazchcaptureorder 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gordybergazchcaptureorder 
+    spec:
+      containers:
+        - name: gordybergazchcaptureorder 
+          image: gordontestacr.azurecr.io/gordybergazchcaptureorder
+          ports:
+          - containerPort: 8080
